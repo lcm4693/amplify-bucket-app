@@ -1,1 +1,13 @@
-<app-todos></app-todos>
+<amplify-authenticator>
+  <ng-template
+    amplifySlot="authenticated"
+    let-user="user"
+    let-signOut="signOut"
+  >
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <app-todos></app-todos>
+    <router-outlet></router-outlet>
+    <button pButton (click)="signOut()">Sign Out</button>
+    <!-- <input pInputText type="text" /> -->
+  </ng-template>
+</amplify-authenticator>
